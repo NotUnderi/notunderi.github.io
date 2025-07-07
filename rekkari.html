@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rekkaribotti — Henrik Heininen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="carousel.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Rekkaribotti</h1>
+    <p>Discord bot for Finnish license plate information</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#details">Details</a>
+      <a href="#features">Features</a>
+      <a href="#stack">Software Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+  <section id="details">
+    <h2>Project Details</h2>
+    <p>
+      Rekkaribotti is a Discord bot designed to search and cache Finnish license plates, providing detailed information about vehicles. The bot simplifies access to vehicle data for users in a Discord server.
+    </p>
+    <p>
+      The bot integrates with Biltema's API to fetch vehicle information and uses caching to optimize performance, reduce redundant API calls and provide statistics.
+    </p>
+    <p>
+      The project is open-source and can be found <a href="https://github.com/notunderi/rekkaribotti" target="_blank">here</a>.
+    </p>
+  </section>
+
+
+  <!-- Gallery Section -->
+  <section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="assets/images/rekkari1.jpg" alt="Rekkaribotti Screenshot 1" />
+        <img src="assets/images/rekkari2.jpg" alt="Rekkaribotti Screenshot 2" />
+        <img src="assets/images/rekkari3.jpg" alt="Rekkaribotti Screenshot 3" />
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Search Finnish license plates directly in Discord</li>
+      <li>Cache results to improve performance</li>
+      <li>Fun statistics about seen cars</li>
+      <li>Simple and user-friendly commands</li>
+    </ul>
+  </section>
+
+  <!-- Stack Section -->
+  <section id="stack">
+    <h2>Software Stack</h2>
+    <ul>
+      <li>Python</li>
+      <li>Discord.py</li>
+      <li>SQLite for caching</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions about this project or would like to collaborate, feel free to reach out:</p>
+    <p>Email: <a href="mailto:henrik@heiniset.fi">henrik@heiniset.fi</a></p>
+    <p><a class="link" href="https://github.com/notunderi" target="_blank" rel="noopener noreferrer"><img id="github" src="assets/images/github-mark.svg">GitHub</a></p>
+    <p><a class ="link"href="https://linkedin.com/in/heininen" target="_blank" rel="noopener noreferrer"><img id="linkedin" src="assets/images/InBug-Black.png">LinkedIn</a></p>
+  
+  </section>
+
+
+  <!-- Modal for Enlarged Image -->
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image" />
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Henrik Heininen</p>
+    <p>Work in Progress</p>
+  </footer>
+
+</body>
+</html>

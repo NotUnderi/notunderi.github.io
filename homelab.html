@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Lab — Henrik Heininen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="carousel.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Home Lab</h1>
+    <p>Exploring enterprise-grade hardware and services at home</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#details">Details</a>
+      <a href="#features">Features</a>
+      <a href="#stack">Software Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+  <section id="details">
+    <h2>Project Details</h2>
+    <p>
+      My home lab is built around a Dell R730 PowerEdge server and serves as a platform for learning, experimenting, and hosting various services. It allows me to explore enterprise-grade hardware and software in a personal environment.
+    </p>
+    <p>
+      The lab is used for tasks such as virtualization, container orchestration, and running self-hosted applications. It also helps me improve my skills in system administration, networking, and automation.
+    </p>
+    <p>
+      The project is a continuous work in progress, with regular upgrades and new experiments.
+    </p>
+    <p>
+        I am running Proxmox VE as the hypervisor, which allows me to create and manage virtual machines and containers efficiently.
+        Remote access is provided through Tailscale, due to my apartment network being firewalled and doesn't support opening ports.
+    </p>
+    <p>
+        Hosted services include Nextcloud for cloud storage, Pi-hole for ad-blocking and local domains, OpnSense for firewall and routing, Jellyfin for media streaming, and various other applications for personal use.
+    </p>
+    <p>Network infrastructure consists of the R730 server, a Telewell router working as a Wi-Fi access point, my personal desktop computer, TV and my Playstation all connected through an HP ProCurve managed switch.</p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="assets/images/homelab1.jpg" alt="Home Lab Setup 1" />
+        <img src="assets/images/homelab2.jpg" alt="Home Lab Setup 2" />
+        <img src="assets/images/homelab3.jpg" alt="Home Lab Setup 3" />
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Virtualization using Proxmox VE</li>
+      <li>Container orchestration with Docker</li>
+      <li>Self-hosted services like Nextcloud and OpnSense</li>
+      <li>Network monitoring and management</li>
+    </ul>
+  </section>
+
+  <!-- Stack Section -->
+  <section id="stack">
+    <h2>Software Stack</h2>
+    <ul>
+      <li>Proxmox VE for virtualization</li>
+      <li>Docker and Docker Compose for containers</li>
+      <li>Ubuntu Server for VMs</li>
+      <li>Grafana and Prometheus for monitoring</li>
+      <li>OpenVPN for secure remote access</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions about this project or would like to collaborate, feel free to reach out:</p>
+    <p>Email: <a href="mailto:henrik@heiniset.fi">henrik@heiniset.fi</a></p>
+    <p><a class="link" href="https://github.com/notunderi" target="_blank" rel="noopener noreferrer"><img id="github" src="assets/images/github-mark.svg">GitHub</a></p>
+    <p><a class ="link"href="https://linkedin.com/in/heininen" target="_blank" rel="noopener noreferrer"><img id="linkedin" src="assets/images/InBug-Black.png">LinkedIn</a></p>
+  
+  </section>
+
+  <!-- Modal for Enlarged Image -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image" />
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Henrik Heininen</p>
+    <p>Work in Progress</p>
+  </footer>
+
+</body>
+</html>

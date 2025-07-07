@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grain Dryer Monitoring System — Henrik Heininen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="carousel.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Grain Dryer Monitoring System</h1>
+    <p>Remote monitoring of critical drying properties</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#details">Details</a>
+      <a href="#features">Features</a>
+      <a href="#stack">Software Stack</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+  <section id="details">
+    <h2>Project Details</h2>
+    <p>Project was ordered by a farmer in Masku with the goal of optimizing efficiency and time-use and eliminating the need to visit the dryer in the middle of the drying process</p>
+    <p>
+      The Grain Dryer Monitoring System is a solution designed to remotely monitor critical drying properties such as temperature and humidity. This project aims to improve efficiency and reliability in grain drying processes by providing real-time data and statistics.
+    </p>
+    <p>
+    The backend is built on Django framework that handles saving, receiving and displaying the data.    
+    </p>
+    <p>
+        Hardware on the grain dryer side consists of an ESP8266 microcontroller and a temperature and I2C humidity sensor placed in the dryer exhaust.
+    </p>
+    <p>
+        The microcontroller is connected via a 4G router to the internet and sends the data to the Django server.
+    </p>
+    <p> The code is open-source and can be found <a href="https://github.com/notunderi/kuivuri" target="_blank">here</a></p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="assets/images/kuivuri1.png" alt="Grain Dryer Picture 1" />
+        <img src="assets/images/kuivuri2.jpg" alt="Grain Dryer Picture 2" />
+        <img src="assets/images/kuivuri3.jpg" alt="Grain Dryer Picture 3" />
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Real-time monitoring of temperature and humidity levels</li>
+      <li>Data logging for historical analysis</li>
+      <li>Easy integration with existing grain dryers</li>
+    </ul>
+  </section>
+
+  <section id="stack">
+    <h2>Software stack</h2>
+    <ul>
+        <li>Python</li>
+        <li>Django framework</li>
+        <li>Javascript</li>
+        <li>Chart.js</li>
+        <li>C</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions about this project or would like to collaborate, feel free to reach out:</p>
+    <p>Email: <a href="mailto:henrik@heiniset.fi">henrik@heiniset.fi</a></p>
+    <p><a class="link" href="https://github.com/notunderi" target="_blank" rel="noopener noreferrer"><img id="github" src="assets/images/github-mark.svg">GitHub</a></p>
+    <p><a class ="link"href="https://linkedin.com/in/heininen" target="_blank" rel="noopener noreferrer"><img id="linkedin" src="assets/images/InBug-Black.png">LinkedIn</a></p>
+  
+  </section>
+
+
+  <!-- Modal for Enlarged Image -->
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-image" />
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Henrik Heininen</p>
+    <p>Work in Progress</p>
+  </footer>
+
+</body>
+</html>
