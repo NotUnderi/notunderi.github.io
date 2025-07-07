@@ -158,32 +158,23 @@ ul {
   margin-top: 0.5rem;
 }
 
-.contact-section a {
+#contact a {
   text-decoration: none;
   color: #007aff;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.contact-section a:hover {
+#contact a:hover {
   color: #ffdd57;
 }
 
-.contact-section p {
+#contact p {
   font-size: 1rem;
   margin: 0.5rem 0;
 }
 
-.site-footer {
-  background: #333;
-  color: #fff;
-  padding: 1rem;
-  font-size: 0.9rem;
-}
 
-.site-footer p {
-  margin: 0;
-}
 
 .carousel {
   position: relative;
