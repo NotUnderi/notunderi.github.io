@@ -223,13 +223,7 @@ ul {
 .carousel-btn:hover {
   background: rgba(0, 0, 0, 0.8);
 }
-#linkedin{
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  padding-right:5px;
-}
-#github{
+.icon{
   width: 24px;
   height: 24px;
   vertical-align: middle;
