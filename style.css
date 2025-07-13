@@ -280,3 +280,7 @@ ul {
 .close:hover {
   color: #ffdd57;
 }
+
+html {
+  scroll-padding-top: 190px; /* Prevents header from covering content when jumping to sections */
+}
