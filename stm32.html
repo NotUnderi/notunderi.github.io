@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rekkaribotti — Henrik Heininen</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="carousel.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>STM32 Gauge project</h1>
+    <p>Automotive gauge using LVGL</p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+  <section id="details">
+    <h2>Project Details</h2>
+    <p>
+        This project involved creating an automotive gauge using an STM32 microcontroller and the LVGL graphics library. The gauge displays critical engine parameters such as oil temperature, oil pressure and exhaust gas temperature.
+    </p>
+    <p> Graphics are provided by the <a href="https://lvgl.io/" target="_blank">LVGL</a> library.</p>
+    <p>
+        Originally using a 240x320 rectangular TFT display, I've later decided to change to a round 240x240 display which is easier to install into the dashboard either in a 52mm pod enclousre or embedded into the dash.
+    </p>
+    <p> This project let me learn about SPI and I2C communication protocols as well as library implemantation and the quirks of setting up an environment on the STM microcontroller platform</p>
+    <p> In the future I intend to create a custom PCB and a pod enclosure for the project. Fusion 360 and KiCad are the tools used.</p>
+    <p>
+      The project is open-source and can be found <a href="https://github.com/notunderi/STM32-gauge-display" target="_blank">here</a>.
+    </p>
+  </section>
+
+
+  <!-- Gallery Section -->
+  <section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-images"> 
+        <div class="carousel-slide">  
+          <img src="assets/images/stm32_1.JPEG" alt="STM32 Screenshot 1" />
+          <div class="caption">Initial setup with rectangular display and no LVGL</div>
+          <img src="assets/images/stm32_2.JPEG" alt="STM32 Screenshot 2" />
+          <div class="caption">Testing LVGL graphics on rectangular display</div>
+        </div> 
+          <
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+
+
+  <!-- Stack Section -->
+  <section id="stack">
+    <h2>Software Stack</h2>
+    <ul>
+      <li>C</li>
+      <li>LVGL Library</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions about this project or would like to collaborate, feel free to reach out:</p>
+    <p><a href="mailto:henrik@heiniset.fi"><img class="icon" src="assets/images/email.png">henrik@heiniset.fi</a></p>
+    <p><a class="link" href="https://github.com/notunderi" target="_blank" rel="noopener noreferrer"><img class="icon" src="assets/images/github-mark.svg">GitHub</a></p>
+    <p><a class ="link"href="https://linkedin.com/in/heininen" target="_blank" rel="noopener noreferrer"><img class="icon" src="assets/images/InBug-Black.png">LinkedIn</a></p>
+  
+  </section>
+
+
+  <!-- Modal for Enlarged Image -->
+<div id="image-modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-image" />
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Henrik Heininen</p>
+    <p>Work in Progress</p>
+    <p id="tos"><a href="tos.html">Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>

@@ -196,10 +196,28 @@ ul {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: height 0.3s ease-in-out; /* Smooth height adjustment */
 }
-
+.caption {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 45%;
+  text-align: center;
+}
 .carousel-images {
   display: flex;
+  justify-content: center; /* Center slide content horizontally */
+  align-items: center;      /* Keep images vertically centered if they are smaller */
   transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-images img {
