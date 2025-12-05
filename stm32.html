@@ -36,12 +36,11 @@
     </p>
     <p> Graphics are provided by the <a href="https://lvgl.io/" target="_blank">LVGL</a> library.</p>
     <p>
-        Originally using a 240x320 rectangular TFT display, I've later decided to change to a round 240x240 display which is easier to install into the dashboard either in a 52mm pod enclousre or embedded into the dash.
+        Originally using a 240x320 rectangular TFT display, I've later decided to change to a round 240x240 display which is easier to install into the dashboard either in a 52mm pod enclosure or embedded into the dash.
     </p>
-    <p> This project let me learn about SPI and I2C communication protocols as well as library implemantation and the quirks of setting up an environment on the STM microcontroller platform</p>
-    <p> In the future I intend to create a custom PCB and a pod enclosure for the project. Fusion 360 and KiCad are the tools used.</p>
-    <p>
-      The project is open-source and can be found <a href="https://github.com/notunderi/STM32-gauge-display" target="_blank">here</a>.
+    <p> This project let me learn about SPI and I2C communication protocols as well as library implemantation and the quirks of setting up an environment on the STM microcontroller platform.</p>
+    <p> In the future I intend to create a custom PCB and a pod enclosure for the project. Fusion 360 and KiCad are the tools of choice.</p>
+      <p>The project is open-source and can be found <a href="https://github.com/notunderi/STM32-gauge-display" target="_blank">here</a>.
     </p>
   </section>
 
@@ -52,12 +51,14 @@
     <div class="carousel">
       <div class="carousel-images"> 
         <div class="carousel-slide">  
-          <img src="assets/images/stm32_1.JPEG" alt="STM32 Screenshot 1" />
-          <div class="caption">Initial setup with rectangular display and no LVGL</div>
-          <img src="assets/images/stm32_2.JPEG" alt="STM32 Screenshot 2" />
-          <div class="caption">Testing LVGL graphics on rectangular display</div>
+            <img src="assets/images/stm32_1.JPEG" alt="STM32 based automotive gauge display showing a large blue Volkswagen logo centered on the screen, two yellow green readings at top left reading 22.3C and 27%, and small green status text Underi at bottom right. The display is housed in a gray 3D printed pod resting on a desk with multicolored wires and a network switch blurred in the background. Technical prototype tone, focused and functional." />
+            <div class="caption">Initial setup with rectangular display and no LVGL</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/STM32_2.JPEG" alt="STM32 development board connected to a rectangular TFT gauge display showing four LVGL panels: top-left label EGT with value 1100 C and an orange progress bar; top-right label Oil Temp with value 20.0 C; bottom-left label Oil Press with value 1.2 bar; bottom-right label Ambient with value 25.0 C and a blue progress bar. The display sits on a desk with multicolored jumper wires attached to the microcontroller and blurred electronics in the background. Technical, utilitarian prototype tone." />
+            <div class="caption">Testing LVGL graphics on rectangular display</div>
+          </div>
         </div> 
-          <
       <button class="carousel-btn prev">❮</button>
       <button class="carousel-btn next">❯</button>
     </div>
@@ -71,6 +72,8 @@
     <ul>
       <li>C</li>
       <li>LVGL Library</li>
+      <li>STM32CubeIDE</li>
+      <li>STM32CubeProg</li>
     </ul>
   </section>
 
