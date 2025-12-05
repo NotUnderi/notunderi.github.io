@@ -104,6 +104,15 @@ h2 {
   color: #ffdd57;
 }
 
+.project-card a::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
