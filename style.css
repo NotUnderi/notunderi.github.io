@@ -188,38 +188,69 @@ ul {
 
 .carousel {
   position: relative;
-  max-width: 600px;
-  max-height:400px;
   margin: 2rem auto;
+  width: min(900px, 100%);
+  height: clamp(260px, 60vw, 420px);
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: height 0.3s ease-in-out; /* Smooth height adjustment */
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f9fbff 0%, #eef3ff 100%);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 }
 
 .carousel-images {
   display: flex;
+  height: 100%;
+  width: 100%;
   transition: transform 0.5s ease-in-out;
 }
 
-.carousel-images img {
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carousel-slide img {
   width: 100%;
-  height: 400px; /* Maintain the natural aspect ratio of the images */
+  height: 100%;
   object-fit: contain;
-  flex-shrink: 0;
+  border-radius: 6px;
+  background: #f7f9fc;
+}
+
+.caption {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  color: #0f172a;
+  background-color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+  padding: 0.55rem 0.8rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  border: 1px solid #d9e3ff;
+  padding: 0.45rem 0.9rem;
   cursor: pointer;
   font-size: 1.5rem;
   border-radius: 50%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .carousel-btn.prev {
@@ -231,7 +262,7 @@ ul {
 }
 
 .carousel-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: #fff;
 }
 .icon{
   width: 24px;

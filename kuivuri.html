@@ -31,7 +31,7 @@
   <!-- Project Details Section -->
   <section id="details">
     <h2>Project Details</h2>
-    <p>Project was ordered by a farmer in Masku with the goal of optimizing efficiency and time-use and eliminating the need to visit the dryer in the middle of the drying process</p>
+    <p>The goal of the project was optimizing efficiency and time-use for farmers and eliminating the need to visit the dryer in the middle of the drying process</p>
     <p>
       The Grain Dryer Monitoring System is a solution designed to remotely monitor critical drying properties such as temperature and humidity. This project aims to improve efficiency and reliability in grain drying processes by providing real-time data and statistics.
     </p>
@@ -39,10 +39,13 @@
     The backend is built on Django framework that handles saving, receiving and displaying the data.    
     </p>
     <p>
-        Hardware on the grain dryer side consists of an ESP8266 microcontroller and a temperature and I2C humidity sensor placed in the dryer exhaust.
+        Hardware on the grain dryer side consists of an ESP8266 microcontroller and an I2C temperature and humidity sensor placed in the dryer exhaust.
     </p>
     <p>
         The microcontroller is connected via a 4G router to the internet and sends the data to the Django server.
+    </p>
+    <p>
+      Idea is to migrate to an STM32 MCU and an onboard LTE modem for smaller footprint and to learn the STM32 platform.
     </p>
     <p> The code is open-source and can be found <a href="https://github.com/notunderi/kuivuri" target="_blank">here</a></p>
   </section>
@@ -52,8 +55,8 @@
     <h2>Gallery</h2>
     <div class="carousel">
       <div class="carousel-images">
-        <img src="assets/images/kuivuri1.png" alt="Grain Dryer Picture 1" />
-        <img src="assets/images/kuivuri2.jpg" alt="Grain Dryer Picture 2" />
+        <img src="assets/images/kuivuri1.png" alt="System architecture diagram" />
+        <img src="assets/images/kuivuri2.jpg" alt="Web view" />
       </div>
       <button class="carousel-btn prev">❮</button>
       <button class="carousel-btn next">❯</button>
