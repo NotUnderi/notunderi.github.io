@@ -103,7 +103,7 @@ h2 {
 .project-card a:hover {
   color: #ffdd57;
 }
-
+/*
 .project-card a::before {
   content: "";
   position: absolute;
@@ -111,7 +111,7 @@ h2 {
   right: 0px;
   bottom: 0px;
   left: 0px;
-}
+}*/
 
 footer {
   text-align: center;
