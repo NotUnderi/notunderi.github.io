@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.hehexd.fi/js/pa-AoXenGGOWfupoyN0dc9Y9.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Henrik Heininen — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Gömma</h1>
+    <small>/jœmːa/</small>
+    <p>place where things are hidden or stashed away </p>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#projects">Projects</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Project Details Section -->
+  <section id="details">
+    <h2>Project Details</h2>
+    <p>
+        Gömma is a Django based file hosting service I created for personal use. It's inspired by my friends similar project "Jemma". The front-end is similar, but he wasn't willing to share the back-end so I had to come with my own implementation.
+    </p>
+
+    
+    <p> Please visit the site at <a href="gm.hehexd.fi" target="_blank"> gm.hehexd.fi </a></p>
+    <p>
+      The source code is available on <a href="https://github.com/notunderi/gomma" target="_blank">GitHub</a>.
+    </p>
+  </section>
+
+  <!-- Gallery Section -->
+  <!-- <section id="carousel">
+    <h2>Gallery</h2>
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="assets/images/game1.jpg" alt="Platformer Game Screenshot 1" />
+        <img src="assets/images/game2.jpg" alt="Platformer Game Screenshot 2" />
+        <img src="assets/images/game3.jpg" alt="Platformer Game Screenshot 3" />
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section> -->
+
+
+    <section id="stack">
+    <h2>Thoughts</h2>
+    <p>
+        Files are stored on the filesystem and things like file name, upload date, "stashed" name, IP, and hashes are stored in a PostgreSQL database. The stashed name is a random string that is used to access the file to have shorter URLs. The user can also set their own stashed name if they want to.
+        This might offer an attack vector through SQL injection, so the stashed name is sanitized with <a href="https://docs.djangoproject.com/en/6.0/ref/utils/#django.utils.text.slugify" target="_blank">Django's slugify function</a>. This also prevents any url funkiness.
+    </p>
+
+    <p>
+        Other hardening that was done is not allowing more than 50 files at once and not allowing files larger than 1024MB. The file size limit is enforced both in the Django back-end as well as Nginx.
+        Rate limiting is also implemented through Nginx.
+    </p>
+    <p>
+        I decided against auth due to the fact that this is only for personal use and I don't want to deal with user management. The files are not private, but the stashed name is a random string that is hard to guess, so it's not likely that someone would stumble upon them.
+        In general services like these should be used with the assumption that other people can also access them, so no sensitive files should be uploaded.
+        Another way a person might stumble upon files is through the "recent uploads" section, which shows the 10 most recent uploads from the same IP. This might be problematic if on public Wi-Fi or behing a CGNAT.
+    </p>
+    <p>
+        If more than one file is uploaded at once, they are zipped together and served as a single file. This is done to save space and make it easier to download multiple files at once.
+    </p>
+  </section>
+
+
+  <section id="features">
+    <h2>Dangers</h2>
+    <p> Not sure how great of an idea it is to expose these here :D</p>
+    <p>The VPS only has 40GB of disk space and there are no checks in place in case it's filling up, which will cause a failure at some point</p>
+    <p>Performance wise it might be quite poor. I don't have the means to test multiple users sending (and zipping) multiple files at the same time. At some point Gunicorn will most likely get saturated</p>
+    <p> A big vulnerability that I hadn't considered immediately, but seems quite obvious in hindsight, is only serving safe MIME type files inline. At first I used Python mimetypes.guess() to check if a valid MIME type existed and if it did, serve it inline, otherwise octet-stream. This is a <b>HUGE</b> vulnerability, letting malicious users upload .html or .js files and serve them on my site to unknowing users.</p>
+    <p> Now there is a list of confirmed safe mime types that are served inline, and all others are served as octet-stream.</p>
+
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you have any questions about this project or would like to collaborate, feel free to reach out:</p>
+    <p><a href="mailto:henrik@heiniset.fi"><img class="icon" src="assets/images/email.png">henrik@heiniset.fi</a></p>
+    <p><a class="link" href="https://github.com/notunderi" target="_blank" rel="noopener noreferrer"><img class="icon" src="assets/images/github-mark.svg">GitHub</a></p>
+    <p><a class ="link"href="https://linkedin.com/in/heininen" target="_blank" rel="noopener noreferrer"><img class="icon" src="assets/images/InBug-Black.png">LinkedIn</a></p>
+  
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Henrik Heininen</p>
+    <p>Work in Progress</p>
+    <p id="tos"><a href="tos.html">Terms of Service</a></p>
+  </footer>
+
+</body>
+</html>
