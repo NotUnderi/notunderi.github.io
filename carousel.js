@@ -82,31 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
       track.style.transform = `translateX(-${currentIndex * 100}%)`;
     };
 
-    const startAuto = () => {
-      if (autoTimer || !slides.length) return;
-      autoTimer = setInterval(() => goToSlide(currentIndex + 1), 5000);
-    };
-
-    const stopAuto = () => {
-      if (!autoTimer) return;
-      clearInterval(autoTimer);
-      autoTimer = null;
-    };
 
     nextBtn?.addEventListener("click", () => {
-      stopAuto();
       goToSlide(currentIndex + 1);
-      startAuto();
     });
 
     prevBtn?.addEventListener("click", () => {
-      stopAuto();
       goToSlide(currentIndex - 1);
-      startAuto();
     });
-
-    carousel.addEventListener("mouseenter", stopAuto);
-    carousel.addEventListener("mouseleave", startAuto);
 
     slides.forEach((slide) => {
       const img = slide.querySelector("img");
@@ -115,7 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     goToSlide(0);
-    startAuto();
   };
 
   document.querySelectorAll(".carousel").forEach(setupCarousel);
