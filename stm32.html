@@ -52,6 +52,13 @@
       <p>The project is open-source and can be found <a href="https://github.com/notunderi/STM32-gauge-display" target="_blank" rel="noopener noreferrer">here</a>.
     </p>
     <br><br>
+    <h4>16.4.2026</h4>
+    <p>The PCB has been "redesigned" to fit a smaller radius, 23mm instead of the previous 25.5ish radius in order to fit the casing better</p>
+
+    <p>Some THT radial caps were changed to ceramic SMD caps because the regulator used explicitly asks for them :D This ended up saving a lot of space as well which is nice.</p>
+    <p>I ended up getting rid of the USB port and going for a JST-PH connector instead for power, this allows more flexibility with mounting and I didn't see a good way of implementing the USB port.</p>
+
+    <br><br>
     <h4>17.3.2026</h4>
     <p>Today I finished designing the PCB for the most part. It utilizes the same STM32F407VET6 microprocessor that I have on my development board since it's relatively cheap and my code has been generated for that platform. If nothing else, it won't run out of power.</p>
 
@@ -78,11 +85,19 @@
           </div>
           <div class="carousel-slide">
             <img src="assets/images/stm32screen.png" alt="">
-            <div class="caption">Top side of the designed PCB</div>
+            <div class="caption">Top side of the first iteration PCB</div>
           </div>
           <div class="carousel-slide">
             <img src="assets/images/stm32screen2.png" alt="">
-            <div class="caption">Bottom side of the designed PCB</div>
+            <div class="caption">Bottom side of the first iteration PCB</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/stm32screen.jpg" alt="">
+            <div class="caption">Top side of the redesigned PCB with tighter radius</div>
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/images/stm32screen2.jpg" alt="">
+            <div class="caption">Bottom side of the redesigned PCB with tighter radius</div>
           </div>
         </div> 
       <button class="carousel-btn prev">❮</button>
@@ -100,6 +115,8 @@
       <li>LVGL Library</li>
       <li>STM32CubeIDE</li>
       <li>STM32CubeProg</li>
+      <li>KiCad for PCB design</li>
+      <li>Fusion 360 for parts design</li>
     </ul>
   </section>
 
