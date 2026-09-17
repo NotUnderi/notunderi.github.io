@@ -178,9 +178,14 @@ ul {
   transition: color 0.3s;
 }
 
-#contact a:hover {
-  color: #ffdd57;
+a {
+    transition: color 0.3s;
 }
+
+a:hover {
+  color: #ffdd57 !important;
+}
+
 
 #contact p {
   font-size: 1rem;
